@@ -1,8 +1,8 @@
 from challenges.challenge_encrypt_message import encrypt_message
 from pytest import raises
 
-def test_encrypt_message():
 
+def test_encrypt_message():
     assert encrypt_message('martes', 1) == 'm_setra'
 
     assert encrypt_message('martes', 2) == 'setr_am'
