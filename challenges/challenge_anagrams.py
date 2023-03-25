@@ -2,9 +2,9 @@
 def alptbabetical(lst):
     if not lst:
         return []
-    return (quicksort([x for x in lst[1:] if x < lst[0]])
+    return (alptbabetical([x for x in lst[1:] if x < lst[0]])
             + [lst[0]] +
-            quicksort([x for x in lst[1:] if x >= lst[0]]))
+            alptbabetical([x for x in lst[1:] if x >= lst[0]]))
 
 
 def is_anagram(first_string, second_string):
@@ -18,5 +18,5 @@ def is_anagram(first_string, second_string):
     return (
             ''.join(first_ordered),
             ''.join(second_ordered),
-            first_ordered == second_ordered
+            first_string == second_string
         )
