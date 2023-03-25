@@ -16,7 +16,7 @@ def is_anagram(first_string, second_string):
     if (first_string == '' and second_string == ''):
         return ("", "", False)
     return (
-            ''.join(first_ordered),
-            ''.join(second_ordered),
+            ''.join(first_string),
+            ''.join(second_string),
             first_string == second_string
         )
